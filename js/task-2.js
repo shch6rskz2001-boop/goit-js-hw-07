@@ -25,3 +25,16 @@ const images = [
   }
 ];
 
+
+const galleryEl = document.querySelector(".gallery");
+
+const markup = images
+  .map(({ url, alt }) => {
+    return `
+      <li class="gallery__item">
+        <img class="gallery__img" src="${url}" alt="${alt}" loading="lazy" />
+      </li>
+    `;
+  })
+
+galleryEl.insertAdjacentHTML("beforeend", markup);
