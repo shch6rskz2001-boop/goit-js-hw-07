@@ -25,7 +25,7 @@ const images = [
   }
 ];
 
-
+let gallery = document.querySelector(".gallery");
 const markup = images
   .map(({ url, alt }) => `
     <li class="gallery__item">
@@ -35,3 +35,4 @@ const markup = images
   .join("");
 
 gallery.insertAdjacentHTML("beforeend", markup);
+ 
